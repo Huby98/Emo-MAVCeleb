@@ -1,5 +1,7 @@
 # EMO-MAVceleb
 
+<img width="1292" height="516" alt="Draft-picture2 (1)" src="https://github.com/user-attachments/assets/9903b6e5-d668-43d3-8d6e-fdf1caf286b6" />
+
 ## Cite
 
 If you use this work make sure to cite the baseline for this 
