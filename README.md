@@ -7,12 +7,13 @@ If you use this work make sure to cite the baseline for this
 [Albanie et al., 2018](https://github.com/albanie/mcnCrossModalEmotions)
 
 ```bibtex
-@InProceedings{Albanie18a,
-  title     = {…},
-  author    = {…},
-  booktitle = {…},
-  year      = {2018},
-}  
+@inproceedings{albanie2018emotion,
+  title={Emotion recognition in speech using cross-modal transfer in the wild},
+  author={Albanie, Samuel and Nagrani, Arsha and Vedaldi, Andrea and Zisserman, Andrew},
+  booktitle={Proceedings of the 26th ACM international conference on Multimedia},
+  pages={292--301},
+  year={2018}
+}
 ```
 
 ## Setup
