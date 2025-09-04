@@ -39,7 +39,7 @@ addpath(genpath(fullfile(p,'contrib','mcnDatasets')));
 addpath(genpath(fullfile(p,'contrib','mcnCrossModalEmotions')));
 ```
 
-##Teacher
+## Teacher
 
 After using the setup, to use the teacher three scripts were created inside Matlab (labelthemallv1, labelthemallv2, labelthemallv3)
 For this to work first the splitting of the dataset had to be done (Train/Val/Test) 
