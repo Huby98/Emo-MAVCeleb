@@ -44,6 +44,22 @@ addpath(genpath(fullfile(p,'contrib','mcnCrossModalEmotions')));
 After using the setup, to use the teacher three scripts were created inside Matlab (labelthemallv1, labelthemallv2, labelthemallv3)
 For this to work first the splitting of the dataset had to be done (Train/Val/Test) 
 
+Teacher (Face side)
+
+Input: face-tracks (224×224 crops with aligned audio).
+
+Model: SENet-50 fine-tuned on FER+ (8 emotions).
+
+Scripts:
+
+labelthemallv1.m, labelthemallv2.m, labelthemallv3.m
+These run the teacher over all clips in MAV-Celeb v1/v2/v3.
+
+Output:
+
+For each clip, frame-level predictions stored in frames_predictions_all.csv
+(path, time index, softmax probabilities for 8 emotions).
+
 
 
 
