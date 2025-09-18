@@ -45,9 +45,12 @@ addpath(genpath(fullfile(p,'contrib','mcnCrossModalEmotions')));
 
 ## Teacher (Face Side)
 
-After using the setup, to use the teacher script were created inside Matlab (labelthemall)
-For this to work first the splitting of the dataset had to be done (Train/Val/Test) 
+After using the setup, to use the teacher script were created inside Matlab (labelthemallv)
+For this to work first the splitting of the dataset had to be done (Train/Val/Test).
+After doing this for all 3 datasets, training can be done. 
 
+## Student (Audio Side)
+Use train_student & evaluate_student for that.
 
 
 
