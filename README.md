@@ -1,6 +1,7 @@
 # EMO-MAVceleb
 
-<img width="1292" height="516" alt="Draft-picture2 (1)" src="https://github.com/user-attachments/assets/9903b6e5-d668-43d3-8d6e-fdf1caf286b6" />
+<img width="1292" height="516" alt="Picture-ID0005-New" src="https://github.com/user-attachments/assets/c1a661ae-2382-444f-80d9-088a226b32a3" />
+
 
 ## Cite
 
