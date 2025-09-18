@@ -3,9 +3,9 @@ from torch.utils.data import Dataset, DataLoader
 import torchaudio
 from tqdm import tqdm
 
-from VGGnet import EmoVGGVoxStudent  # your VGG-M style student
+from VGGnet import EmoVGGVoxStudent  
 
-# make torchaudio prefer sox_io if available (quietly ignore failures)
+
 try:
     import torchaudio
     if hasattr(torchaudio, "set_audio_backend"):
@@ -19,26 +19,26 @@ import torch.nn.functional as F
 
 def load_wav_any(path: str, target_sr: int):
     """Load WAV robustly: torchaudio -> soundfile -> wave; resample if needed."""
-    # 1) try torchaudio
+    
     try:
         import torchaudio
-        wav, sr = torchaudio.load(path)  # (C, T) float32 in [-1,1]
+        wav, sr = torchaudio.load(path) 
         ok = True
     except Exception:
         ok = False
 
-    # 2) try soundfile
+ 
     if not ok:
         try:
             import soundfile as sf
-            x, sr = sf.read(path, dtype="float32", always_2d=True)  # (T, C)
+            x, sr = sf.read(path, dtype="float32", always_2d=True) 
             x = x.T  # (C, T)
             wav = torch.from_numpy(x)
             ok = True
         except Exception:
             ok = False
 
-    # 3) last resort: wave (PCM only)
+   
     if not ok:
         import wave, contextlib
         with contextlib.closing(wave.open(path, "rb")) as w:
@@ -58,12 +58,12 @@ def load_wav_any(path: str, target_sr: int):
         a = a.reshape(-1, ch).T  # (C, T)
         wav = torch.from_numpy(a)
 
-    # mono
+    
     if wav.dim() == 1:
         wav = wav.unsqueeze(0)
     wav = wav.mean(0, keepdim=True)  # (1, T)
 
-    # resample if needed
+    
     if sr != target_sr:
         try:
             import torchaudio
@@ -82,7 +82,7 @@ def load_wav_any(path: str, target_sr: int):
 
 EMOS = ["neutral","happiness","surprise","sadness","anger","disgust","fear","contempt"]
 
-# ---------------- Dataset ----------------
+
 class EmoVoxDataset(Dataset):
     def __init__(self, csv_path, sr=16000, dur_s=4.0, train=True):
         self.df = pd.read_csv(csv_path)
@@ -90,7 +90,7 @@ class EmoVoxDataset(Dataset):
         self.train = train
         self.n_samples = int(sr * dur_s)
 
-        # clean/normalize soft labels
+        
         for c in EMOS:
             self.df[c] = (self.df[c].astype(str)
                                         .str.replace(r"[\[\]]", "", regex=True)
@@ -121,7 +121,7 @@ class EmoVoxDataset(Dataset):
     def __getitem__(self, i):
         r = self.df.iloc[i]
 
-        # teacher probs (robust)
+        
         y_np = pd.to_numeric(r[EMOS], errors="coerce").fillna(0.0).to_numpy()
         y_np = np.clip(y_np, 0.0, None)
         s = float(y_np.sum())
@@ -137,19 +137,19 @@ class EmoVoxDataset(Dataset):
             start = 0 if not self.train else int(np.random.randint(0, T - n + 1))
             wav = wav[:, start:start+n]
 
-        # spectrogram -> [1, 512, 400]
-        spec = self.spec(wav)          # [1, F, T]
+        
+        spec = self.spec(wav)        
         spec = spec[:, :512, :]
         spec = self._fix_time(spec, 400)
 
-        # per-freq CMVN across time
+        
         mean = spec.mean(dim=-1, keepdim=True)
         std  = spec.std(dim=-1, keepdim=True).clamp_min(1e-5)
         spec = (spec - mean) / std
 
         return spec, y
 
-# ---------------- Tiny fallback (optional) ----------------
+
 class TinyAudioCNN(nn.Module):
     def __init__(self, n_classes=8):
         super().__init__()
@@ -164,14 +164,14 @@ class TinyAudioCNN(nn.Module):
         h = self.feat(x).squeeze(-1).squeeze(-1)
         return self.fc(h)
 
-# ---------------- Distillation loss (CE with T, matches paper) ----------------
+
 def kd_ce(student_logits, teacher_probs, T=2.0):
-    # teacher soft targets with temperature
+    
     t = torch.clamp(teacher_probs, 1e-8, 1.0)
     t = torch.softmax(torch.log(t)/T, dim=-1)
-    # student log-probs with temperature
+    
     s_log = torch.log_softmax(student_logits/T, dim=-1)
-    # cross-entropy H(t, s) * T^2
+    
     return (- (t * s_log).sum(dim=-1)).mean() * (T*T)
 
 @torch.no_grad()
@@ -186,7 +186,7 @@ def evaluate(model, dl, device, T=2.0):
         n += spec.size(0)
     return loss_sum/max(n,1), agree/max(n,1)
 
-# ---------------- Main ----------------
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--train_csv", required=True)
@@ -223,14 +223,14 @@ def main():
              else TinyAudioCNN(n_classes=len(EMOS)))
     model = model.to(device)
 
-    # SGD (paper): momentum=0.9, weight_decay=5e-4
+    
     opt = torch.optim.SGD(model.parameters(),
                           lr=args.lr_init,
                           momentum=args.momentum,
                           weight_decay=args.weight_decay,
                           nesterov=False)
 
-    # geometric (log) decay from lr_init -> lr_final over epochs
+    
     def lr_at(e):
         if args.epochs <= 1: return args.lr_final
         t = (e-1) / (args.epochs-1)
@@ -273,3 +273,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
