@@ -11,7 +11,7 @@ This repository contains the code and labels needed to reproduce the results in 
 ## Repository layout
 
 ```
-teacher/poster/label_poster.py      POSTER V2 (AffectNet-8) per-frame face labels      -> "ours"
+teacher/poster/label_poster.py      POSTER V2 (AffectNet-8) per-frame face labels      -> "our approach"
 teacher/senet/dump_frames_senet.m   SENet-50 FER+ per-frame face labels (MatConvNet)  -> baseline (Albanie et al.)
 student/                            audio students: training, evaluation, VGGVox and WavLM models
 pipeline/clip_labels.py             1  frame labels -> clip labels (max-pooled per video)
