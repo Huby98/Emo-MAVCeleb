@@ -1,6 +1,9 @@
 # EMO-MAVCeleb
 
-<img width="1292" height="516" alt="Picture-ID0005-New" src="https://github.com/user-attachments/assets/c1a661ae-2382-444f-80d9-088a226b32a3" />
+<img width="2160" height="1200" alt="13_control_v2__id0021__English__dqWEMQEaNO0__0000" src="https://github.com/user-attachments/assets/3c5412ab-5d73-4578-ae57-aacc9c7dd341" />
+<img width="2160" height="1200" alt="05_collapse_v2__id0018__Hindi__UYbBGr6eWBQ__00000" src="https://github.com/user-attachments/assets/772d96a7-7cf5-438e-a7fd-6597071b55b7" />
+<img width="2160" height="1200" alt="01_collapse_v1__id0036__English__SprpUIukOzE__00000" src="https://github.com/user-attachments/assets/b41afca1-28f2-4d4f-82a4-5bcb3205c1df" />
+
 
 Cross-modal emotion distillation on MAV-Celeb (v1 English/Urdu, v2 English/Hindi, v3 English/German).
 A face-emotion teacher labels the video frames; the frame labels are pooled per video and used as soft
