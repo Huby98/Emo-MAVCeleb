@@ -1,0 +1,7 @@
+torch==2.5.1
+torchaudio==2.5.1
+transformers==5.13.0
+numpy==2.4.6
+pandas==2.2.3
+tqdm
+opencv-python  # only for teacher/poster/label_poster.py

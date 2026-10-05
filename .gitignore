@@ -1,0 +1,6 @@
+data/splits/
+runs/
+teacher_outputs/
+mavceleb/
+__pycache__/
+*.pyc

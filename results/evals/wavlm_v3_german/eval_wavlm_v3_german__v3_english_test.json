@@ -1,0 +1,152 @@
+{
+  "n": 282,
+  "top1_agree": 0.1524822695035461,
+  "balanced_acc": 0.20106382978723403,
+  "macro_f1": 0.03383049126080222,
+  "n_classes_in_gold": 5,
+  "cohens_kappa": 0.0020138004560665713,
+  "neutral_pred_rate": 0.0,
+  "per_class": {
+    "neutral": {
+      "support": 0,
+      "predicted": 0,
+      "recall": null,
+      "precision": null,
+      "f1": null
+    },
+    "happiness": {
+      "support": 188,
+      "predicted": 1,
+      "recall": 0.005319148936170213,
+      "precision": 1.0,
+      "f1": 0.010582010582000055
+    },
+    "surprise": {
+      "support": 42,
+      "predicted": 281,
+      "recall": 1.0,
+      "precision": 0.1494661921708185,
+      "f1": 0.2600619195044177
+    },
+    "sadness": {
+      "support": 0,
+      "predicted": 0,
+      "recall": null,
+      "precision": null,
+      "f1": null
+    },
+    "anger": {
+      "support": 29,
+      "predicted": 0,
+      "recall": 0.0,
+      "precision": null,
+      "f1": 0.0
+    },
+    "disgust": {
+      "support": 3,
+      "predicted": 0,
+      "recall": 0.0,
+      "precision": null,
+      "f1": 0.0
+    },
+    "fear": {
+      "support": 20,
+      "predicted": 0,
+      "recall": 0.0,
+      "precision": null,
+      "f1": 0.0
+    },
+    "contempt": {
+      "support": 0,
+      "predicted": 0,
+      "recall": null,
+      "precision": null,
+      "f1": null
+    }
+  },
+  "confusion_matrix": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      187,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      42,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      29,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      3,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      20,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "tag": "wavlm_v3_german__v3_english_test",
+  "ckpt": "runs/wavlm_v3_german/best.pt",
+  "csv": "data/splits/known/poster_v3_english_test.csv"
+}

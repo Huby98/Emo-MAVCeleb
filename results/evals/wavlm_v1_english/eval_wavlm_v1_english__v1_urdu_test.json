@@ -1,0 +1,152 @@
+{
+  "n": 1974,
+  "top1_agree": 0.2826747720364742,
+  "balanced_acc": 0.17686439559082764,
+  "macro_f1": 0.13651091557234182,
+  "n_classes_in_gold": 7,
+  "cohens_kappa": 0.09755192770559207,
+  "neutral_pred_rate": 0.12208713272543059,
+  "per_class": {
+    "neutral": {
+      "support": 70,
+      "predicted": 241,
+      "recall": 0.1,
+      "precision": 0.029045643153526972,
+      "f1": 0.04501607717006916
+    },
+    "happiness": {
+      "support": 632,
+      "predicted": 136,
+      "recall": 0.10443037974683544,
+      "precision": 0.4852941176470588,
+      "f1": 0.17187499999970857
+    },
+    "surprise": {
+      "support": 470,
+      "predicted": 1052,
+      "recall": 0.5914893617021276,
+      "precision": 0.26425855513307983,
+      "f1": 0.3653088042045665
+    },
+    "sadness": {
+      "support": 193,
+      "predicted": 76,
+      "recall": 0.031088082901554404,
+      "precision": 0.07894736842105263,
+      "f1": 0.04460966542710388
+    },
+    "anger": {
+      "support": 489,
+      "predicted": 375,
+      "recall": 0.4110429447852761,
+      "precision": 0.536,
+      "f1": 0.4652777777772865
+    },
+    "disgust": {
+      "support": 0,
+      "predicted": 30,
+      "recall": null,
+      "precision": 0.0,
+      "f1": null
+    },
+    "fear": {
+      "support": 109,
+      "predicted": 34,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    "contempt": {
+      "support": 11,
+      "predicted": 30,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      7,
+      5,
+      29,
+      6,
+      18,
+      3,
+      0,
+      2
+    ],
+    [
+      56,
+      66,
+      443,
+      11,
+      39,
+      3,
+      1,
+      13
+    ],
+    [
+      90,
+      16,
+      278,
+      19,
+      57,
+      0,
+      0,
+      10
+    ],
+    [
+      10,
+      5,
+      94,
+      6,
+      54,
+      23,
+      1,
+      0
+    ],
+    [
+      61,
+      19,
+      163,
+      11,
+      201,
+      1,
+      32,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      16,
+      21,
+      39,
+      23,
+      6,
+      0,
+      0,
+      4
+    ],
+    [
+      1,
+      4,
+      6,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "tag": "wavlm_v1_english__v1_urdu_test",
+  "ckpt": "runs/wavlm_v1_english/best.pt",
+  "csv": "data/splits/known/poster_v1_urdu_test.csv"
+}

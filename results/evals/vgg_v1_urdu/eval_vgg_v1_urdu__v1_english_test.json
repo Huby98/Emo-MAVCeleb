@@ -1,0 +1,152 @@
+{
+  "n": 1028,
+  "top1_agree": 0.15856031128404668,
+  "balanced_acc": 0.11091444091532174,
+  "macro_f1": 0.0955715230266771,
+  "n_classes_in_gold": 8,
+  "cohens_kappa": -0.014235707548084455,
+  "neutral_pred_rate": 0.2178988326848249,
+  "per_class": {
+    "neutral": {
+      "support": 19,
+      "predicted": 224,
+      "recall": 0.15789473684210525,
+      "precision": 0.013392857142857142,
+      "f1": 0.024691358024547205
+    },
+    "happiness": {
+      "support": 390,
+      "predicted": 112,
+      "recall": 0.12051282051282051,
+      "precision": 0.41964285714285715,
+      "f1": 0.18725099601558962
+    },
+    "surprise": {
+      "support": 236,
+      "predicted": 308,
+      "recall": 0.2457627118644068,
+      "precision": 0.18831168831168832,
+      "f1": 0.21323529411715583
+    },
+    "sadness": {
+      "support": 238,
+      "predicted": 187,
+      "recall": 0.13865546218487396,
+      "precision": 0.17647058823529413,
+      "f1": 0.15529411764656606
+    },
+    "anger": {
+      "support": 98,
+      "predicted": 141,
+      "recall": 0.22448979591836735,
+      "precision": 0.15602836879432624,
+      "f1": 0.18410041840955801
+    },
+    "disgust": {
+      "support": 8,
+      "predicted": 6,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    "fear": {
+      "support": 38,
+      "predicted": 27,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    "contempt": {
+      "support": 1,
+      "predicted": 23,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      3,
+      2,
+      7,
+      5,
+      2,
+      0,
+      0,
+      0
+    ],
+    [
+      79,
+      47,
+      117,
+      77,
+      43,
+      1,
+      10,
+      16
+    ],
+    [
+      54,
+      25,
+      58,
+      35,
+      50,
+      2,
+      9,
+      3
+    ],
+    [
+      56,
+      32,
+      80,
+      33,
+      24,
+      3,
+      7,
+      3
+    ],
+    [
+      22,
+      3,
+      22,
+      27,
+      22,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      5,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      9,
+      3,
+      18,
+      8,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "tag": "vgg_v1_urdu__v1_english_test",
+  "ckpt": "runs/vgg_v1_urdu/best.pt",
+  "csv": "data/splits/known/poster_v1_english_test.csv"
+}

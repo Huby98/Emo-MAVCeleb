@@ -1,0 +1,152 @@
+{
+  "n": 2043,
+  "top1_agree": 0.13411649534997552,
+  "balanced_acc": 0.13712847673444487,
+  "macro_f1": 0.07311163114971797,
+  "n_classes_in_gold": 8,
+  "cohens_kappa": 1.9091699924942248e-05,
+  "neutral_pred_rate": 0.23494860499265785,
+  "per_class": {
+    "neutral": {
+      "support": 37,
+      "predicted": 480,
+      "recall": 0.2702702702702703,
+      "precision": 0.020833333333333332,
+      "f1": 0.038684719535650475
+    },
+    "happiness": {
+      "support": 1331,
+      "predicted": 155,
+      "recall": 0.08039068369646882,
+      "precision": 0.6903225806451613,
+      "f1": 0.14401076715997466
+    },
+    "surprise": {
+      "support": 326,
+      "predicted": 872,
+      "recall": 0.3619631901840491,
+      "precision": 0.1353211009174312,
+      "f1": 0.19699499165235845
+    },
+    "sadness": {
+      "support": 80,
+      "predicted": 178,
+      "recall": 0.1,
+      "precision": 0.0449438202247191,
+      "f1": 0.06201550387554113
+    },
+    "anger": {
+      "support": 109,
+      "predicted": 324,
+      "recall": 0.28440366972477066,
+      "precision": 0.09567901234567901,
+      "f1": 0.14318706697421912
+    },
+    "disgust": {
+      "support": 52,
+      "predicted": 10,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    "fear": {
+      "support": 56,
+      "predicted": 13,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    "contempt": {
+      "support": 52,
+      "predicted": 11,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      10,
+      7,
+      16,
+      0,
+      2,
+      0,
+      1,
+      1
+    ],
+    [
+      310,
+      107,
+      611,
+      121,
+      158,
+      9,
+      9,
+      6
+    ],
+    [
+      90,
+      12,
+      118,
+      20,
+      80,
+      1,
+      1,
+      4
+    ],
+    [
+      18,
+      14,
+      23,
+      8,
+      16,
+      0,
+      1,
+      0
+    ],
+    [
+      19,
+      3,
+      42,
+      13,
+      31,
+      0,
+      1,
+      0
+    ],
+    [
+      7,
+      1,
+      19,
+      6,
+      19,
+      0,
+      0,
+      0
+    ],
+    [
+      13,
+      8,
+      24,
+      7,
+      4,
+      0,
+      0,
+      0
+    ],
+    [
+      13,
+      3,
+      19,
+      3,
+      14,
+      0,
+      0,
+      0
+    ]
+  ],
+  "tag": "vgg_pooled_english__v3_german_all",
+  "ckpt": "runs/vgg_pooled_english/best.pt",
+  "csv": "data/splits/all/poster_v3_german_all.csv"
+}

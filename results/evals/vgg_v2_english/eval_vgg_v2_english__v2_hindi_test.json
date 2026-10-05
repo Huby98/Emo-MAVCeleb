@@ -1,0 +1,152 @@
+{
+  "n": 1235,
+  "top1_agree": 0.23076923076923078,
+  "balanced_acc": 0.16153973930310203,
+  "macro_f1": 0.14756085571740363,
+  "n_classes_in_gold": 8,
+  "cohens_kappa": 0.06293603525101654,
+  "neutral_pred_rate": 0.297165991902834,
+  "per_class": {
+    "neutral": {
+      "support": 82,
+      "predicted": 367,
+      "recall": 0.34146341463414637,
+      "precision": 0.07629427792915532,
+      "f1": 0.12472160356317584
+    },
+    "happiness": {
+      "support": 282,
+      "predicted": 133,
+      "recall": 0.20921985815602837,
+      "precision": 0.44360902255639095,
+      "f1": 0.2843373493971548
+    },
+    "surprise": {
+      "support": 407,
+      "predicted": 373,
+      "recall": 0.29975429975429974,
+      "precision": 0.32707774798927614,
+      "f1": 0.3128205128200138
+    },
+    "sadness": {
+      "support": 156,
+      "predicted": 99,
+      "recall": 0.14743589743589744,
+      "precision": 0.23232323232323232,
+      "f1": 0.18039215686227011
+    },
+    "anger": {
+      "support": 180,
+      "predicted": 201,
+      "recall": 0.29444444444444445,
+      "precision": 0.263681592039801,
+      "f1": 0.27821522309661434
+    },
+    "disgust": {
+      "support": 115,
+      "predicted": 16,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    "fear": {
+      "support": 6,
+      "predicted": 21,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    "contempt": {
+      "support": 7,
+      "predicted": 25,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      28,
+      6,
+      21,
+      4,
+      16,
+      2,
+      3,
+      2
+    ],
+    [
+      82,
+      59,
+      93,
+      16,
+      20,
+      1,
+      1,
+      10
+    ],
+    [
+      113,
+      27,
+      122,
+      37,
+      84,
+      8,
+      12,
+      4
+    ],
+    [
+      49,
+      17,
+      46,
+      23,
+      17,
+      2,
+      2,
+      0
+    ],
+    [
+      50,
+      8,
+      42,
+      15,
+      53,
+      3,
+      3,
+      6
+    ],
+    [
+      42,
+      13,
+      45,
+      3,
+      9,
+      0,
+      0,
+      3
+    ],
+    [
+      1,
+      2,
+      2,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      1,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0
+    ]
+  ],
+  "tag": "vgg_v2_english__v2_hindi_test",
+  "ckpt": "runs/vgg_v2_english/best.pt",
+  "csv": "data/splits/known/poster_v2_hindi_test.csv"
+}

@@ -1,0 +1,152 @@
+{
+  "n": 1769,
+  "top1_agree": 0.27303561334087056,
+  "balanced_acc": 0.1741767236601806,
+  "macro_f1": 0.13723020386857646,
+  "n_classes_in_gold": 8,
+  "cohens_kappa": 0.06444726557761059,
+  "neutral_pred_rate": 0.07857546636517806,
+  "per_class": {
+    "neutral": {
+      "support": 18,
+      "predicted": 139,
+      "recall": 0.2222222222222222,
+      "precision": 0.02877697841726619,
+      "f1": 0.05095541401253585
+    },
+    "happiness": {
+      "support": 925,
+      "predicted": 362,
+      "recall": 0.27135135135135136,
+      "precision": 0.6933701657458563,
+      "f1": 0.39005439005398573
+    },
+    "surprise": {
+      "support": 319,
+      "predicted": 995,
+      "recall": 0.5736677115987461,
+      "precision": 0.18391959798994975,
+      "f1": 0.27853881278502046
+    },
+    "sadness": {
+      "support": 201,
+      "predicted": 98,
+      "recall": 0.04975124378109453,
+      "precision": 0.10204081632653061,
+      "f1": 0.06688963210658275
+    },
+    "anger": {
+      "support": 159,
+      "predicted": 137,
+      "recall": 0.20125786163522014,
+      "precision": 0.23357664233576642,
+      "f1": 0.21621621621571901
+    },
+    "disgust": {
+      "support": 60,
+      "predicted": 2,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    "fear": {
+      "support": 51,
+      "predicted": 4,
+      "recall": 0.0196078431372549,
+      "precision": 0.25,
+      "f1": 0.03636363636350149
+    },
+    "contempt": {
+      "support": 36,
+      "predicted": 32,
+      "recall": 0.05555555555555555,
+      "precision": 0.0625,
+      "f1": 0.05882352941126643
+    }
+  },
+  "confusion_matrix": [
+    [
+      4,
+      1,
+      8,
+      0,
+      5,
+      0,
+      0,
+      0
+    ],
+    [
+      62,
+      251,
+      521,
+      37,
+      30,
+      1,
+      3,
+      20
+    ],
+    [
+      26,
+      41,
+      183,
+      28,
+      35,
+      0,
+      0,
+      6
+    ],
+    [
+      28,
+      22,
+      121,
+      10,
+      18,
+      0,
+      0,
+      2
+    ],
+    [
+      10,
+      1,
+      97,
+      16,
+      32,
+      1,
+      0,
+      2
+    ],
+    [
+      5,
+      38,
+      14,
+      2,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      3,
+      4,
+      35,
+      4,
+      4,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      4,
+      16,
+      1,
+      12,
+      0,
+      0,
+      2
+    ]
+  ],
+  "tag": "wavlm_pooled_nonenglish__v3_english_all",
+  "ckpt": "runs/wavlm_pooled_nonenglish/best.pt",
+  "csv": "data/splits/all/poster_v3_english_all.csv"
+}

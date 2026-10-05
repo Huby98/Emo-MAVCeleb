@@ -1,0 +1,152 @@
+{
+  "n": 1235,
+  "top1_agree": 0.32469635627530363,
+  "balanced_acc": 0.20146258798308614,
+  "macro_f1": 0.1509070693759055,
+  "n_classes_in_gold": 8,
+  "cohens_kappa": 0.1395115887193051,
+  "neutral_pred_rate": 0.3117408906882591,
+  "per_class": {
+    "neutral": {
+      "support": 82,
+      "predicted": 385,
+      "recall": 0.4024390243902439,
+      "precision": 0.08571428571428572,
+      "f1": 0.14132762312604882
+    },
+    "happiness": {
+      "support": 282,
+      "predicted": 25,
+      "recall": 0.024822695035460994,
+      "precision": 0.28,
+      "f1": 0.045602605863042586
+    },
+    "surprise": {
+      "support": 407,
+      "predicted": 622,
+      "recall": 0.6511056511056511,
+      "precision": 0.42604501607717044,
+      "f1": 0.5150631681239144
+    },
+    "sadness": {
+      "support": 156,
+      "predicted": 3,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    "anger": {
+      "support": 180,
+      "predicted": 200,
+      "recall": 0.5333333333333333,
+      "precision": 0.48,
+      "f1": 0.5052631578942383
+    },
+    "disgust": {
+      "support": 115,
+      "predicted": 0,
+      "recall": 0.0,
+      "precision": null,
+      "f1": 0.0
+    },
+    "fear": {
+      "support": 6,
+      "predicted": 0,
+      "recall": 0.0,
+      "precision": null,
+      "f1": 0.0
+    },
+    "contempt": {
+      "support": 7,
+      "predicted": 0,
+      "recall": 0.0,
+      "precision": null,
+      "f1": 0.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      33,
+      0,
+      6,
+      0,
+      43,
+      0,
+      0,
+      0
+    ],
+    [
+      121,
+      7,
+      152,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    [
+      105,
+      1,
+      265,
+      3,
+      33,
+      0,
+      0,
+      0
+    ],
+    [
+      12,
+      6,
+      122,
+      0,
+      16,
+      0,
+      0,
+      0
+    ],
+    [
+      29,
+      0,
+      55,
+      0,
+      96,
+      0,
+      0,
+      0
+    ],
+    [
+      80,
+      11,
+      15,
+      0,
+      9,
+      0,
+      0,
+      0
+    ],
+    [
+      5,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      6,
+      0,
+      1,
+      0,
+      0,
+      0
+    ]
+  ],
+  "tag": "wavlm_v2_english__v2_hindi_test",
+  "ckpt": "runs/wavlm_v2_english/best.pt",
+  "csv": "data/splits/known/poster_v2_hindi_test.csv"
+}
