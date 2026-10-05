@@ -1,15 +1,3 @@
-"""
-Step 4 -- the paper's tables from the eval JSONs (Macro-F1 x 100, one decimal) and the clip labels.
-
-    python pipeline/make_tables.py                          # from your own runs/
-    python pipeline/make_tables.py --evals results/evals    # from the eval JSONs behind the paper
-
-Writes to results/tables/:
-  tables_known_and_pooled.tex          tab:know_set_of_speaker, tab:pooled_transfer
-  unknown_speakers.csv                 tab:unknown_speaker_transfer (train v1+v2 English, test v3)
-  clip_label_class_distribution.csv    tab:emotion_distribution_versions (argmax class share in %)
-  cells.csv                            every number with the JSON it was read from
-"""
 import os, json, argparse
 import pandas as pd
 
