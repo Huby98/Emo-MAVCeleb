@@ -1,19 +1,3 @@
-"""
-Step 1 -- clip-level soft labels from the raw per-frame teacher outputs (both teachers).
-
-For every video, the frame probabilities of a teacher are MAX-pooled over all frames with a face and
-renormalised to sum to 1. The resulting 8-way vector is the label of every audio segment (wav) of that
-video. Only videos that both teachers labelled and that have audio are kept (44,083 clips per teacher).
-
-  * Probability columns are in POSTER V2 / AffectNet-8 order. SENet (FER+) columns are remapped BY NAME.
-  * Video ids may themselves contain '__' (YouTube ids), so file names are split with maxsplit=2.
-
-Inputs : $MAVCELEB_TEACHER_ROOT/poster/mavceleb_v{N}/*.npz, .../senet/mavceleb_v{N}/*.csv,
-         $MAVCELEB_DATA_ROOT/v{N}/voices/<speaker>/<Language>/<video>/*.wav
-Output : data/clip_labels.csv   one row per (clip, teacher); wav_path relative to DATA_ROOT
-
-data/clip_labels.csv ships with the repository, so this step is only needed to re-derive it.
-"""
 import os, glob
 import numpy as np
 import pandas as pd
