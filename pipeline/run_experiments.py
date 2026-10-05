@@ -1,20 +1,3 @@
-"""
-Step 3 -- train and evaluate every student model reported in the paper (POSTER V2 labels).
-
-    python pipeline/run_experiments.py                      # everything, VGGVox first
-    python pipeline/run_experiments.py --students vgg       # only VGGVox
-    python pipeline/run_experiments.py --only vgg_v1_urdu   # a single run
-
-Runs (per student, VGGVox and WavLM):
-  known    {student}_{v}_{lang}      6 per-version models, data/splits/known
-  pooled   {student}_pooled_english  v1+v2+v3 English          -> all Urdu / Hindi / German clips
-           {student}_pooled_nonenglish  Urdu+Hindi+German       -> all English clips
-  unknown  {student}_unknown         v1+v2 English              -> all v3 English / German clips
-
-Each run writes runs/<name>/best.pt (lowest validation loss), train_log.csv, run_config.json and one
-eval_<name>__<test>.json per test set. Finished trainings and existing eval JSONs are skipped, so the
-script can be restarted after an interruption. One GPU job at a time.
-"""
 import os, sys, argparse, subprocess
 
 from paths import REPO, SPLITS, RUNS, STUDENT, PAIRS
