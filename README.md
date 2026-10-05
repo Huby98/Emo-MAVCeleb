@@ -1,9 +1,9 @@
 # EMO-MAVCeleb
 
-[02_collapse_v2__id0062__Hindi__5RzpQItNnJ0__00000.pdf](https://github.com/user-attachments/files/33060681/02_collapse_v2__id0062__Hindi__5RzpQItNnJ0__00000.pdf)
-[06_agree_v2__id0012__Hindi__Mb5Dal0Ql5c__00000.pdf](https://github.com/user-attachments/files/33060655/06_agree_v2__id0012__Hindi__Mb5Dal0Ql5c__00000.pdf)
-[05_collapse_v2__id0018__Hindi__UYbBGr6eWBQ__00000.pdf](https://github.com/user-attachments/files/33060650/05_collapse_v2__id0018__Hindi__UYbBGr6eWBQ__00000.pdf)
 
+<img width="2160" height="1200" alt="05_collapse_v2__id0018__Hindi__UYbBGr6eWBQ__00000" src="https://github.com/user-attachments/assets/92866231-a3d3-4202-b977-af45210426d3" />
+<img width="2160" height="1200" alt="06_agree_v2__id0012__Hindi__Mb5Dal0Ql5c__00000" src="https://github.com/user-attachments/assets/25017362-03af-48d4-8acc-8a1aa6f06ebe" />
+<img width="2160" height="1200" alt="02_collapse_v2__id0062__Hindi__5RzpQItNnJ0__00000" src="https://github.com/user-attachments/assets/8082493a-3da7-4fbf-8071-a56c0f3df104" />
 
 
 Cross-modal emotion distillation on MAV-Celeb (v1 English/Urdu, v2 English/Hindi, v3 English/German).
