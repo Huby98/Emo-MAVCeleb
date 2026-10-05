@@ -1,26 +1,4 @@
-"""
-Step 2 -- all train / val / test splits used in the paper, from data/clip_labels.csv (POSTER labels).
-Deterministic (seed 1337); takes a few seconds and needs no audio.
 
-data/splits/all/poster_{v}_{lang}_all.csv
-    Every clip of one version-language. Test sets for "all clips of an unheard language"
-    (tab:pooled_transfer) and for the unknown-speaker setting (v3 English / German).
-
-data/splits/pooled/poster_pooled_{english,nonenglish}_{train,val}.csv
-    Pooled models: English of v1+v2+v3, or Urdu+Hindi+German. Random 10% of the clips for validation.
-    Every speaker appears in both languages of their own version, so the speakers of the
-    other-language test sets are known speakers.
-
-data/splits/unknown/poster_unknown_{train,val}.csv
-    English of v1+v2 (random 10% validation), tested on all v3 English and German clips.
-    Speaker ids are version-local (v1/id0001 and v3/id0001 are different people) and the versions
-    share no identities, so the v3 test speakers are unknown speakers.
-
-data/splits/known/poster_{v}_{lang}_{train,val,test}.csv
-    Per version-language, video-disjoint ~70/15/15: all segments of a video land in the same split
-    (they share the video-level label), and every speaker keeps >= 1 training video, so every val/test
-    speaker is a known speaker. (tab:know_set_of_speaker)
-"""
 import os
 import numpy as np
 import pandas as pd
